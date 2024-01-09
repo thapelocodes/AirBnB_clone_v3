@@ -1,5 +1,5 @@
-
-lds class User"""
+#!/usr/bin/python3
+"""holds class User"""
 import models
 from models.base_model import BaseModel, Base
 from os import getenv
@@ -26,9 +26,7 @@ class User(BaseModel, Base):
         last_name = ""
 
     def __init__(self, *args, **kwargs):
-        """
-            instantiates user object
-        """
+        """instantiates user object"""
         if kwargs:
             pwd = kwargs.pop('password', None)
             if pwd:
